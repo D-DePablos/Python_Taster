@@ -2,18 +2,15 @@
 
 #---- Imports ----------------------------------------------------------#
 
-from scipy.io.idl import readsav                    # For reading IDL data
-import matplotlib.pyplot as plt                     # For plotting
-
-##import matplotlib.pyplot as plt
-##import sunpy.cm
-##cmap = plt.get_cmap('sdoaia171')
+from scipy.io.idl import readsav        #For reading IDL data
+import matplotlib.pyplot as plt         #For plotting
+import sunpy.cm                         #For solar colourmaps
 
 #---- Inputs -----------------------------------------------------------#
 
 data_path = ('/Users/alexanderjames/Documents/PhD/Python_Code'
              '/Python_Taster/1_map_from_sav/')
-sav_file = '20120614_1030_1316_smaparr_0hmi.sav'
+sav_file = 'aia_193_maps.sav'
 
 #---- Read Data --------------------------------------------------------#
 
@@ -21,12 +18,10 @@ idl_data = readsav(data_path+sav_file)  #Read the sav file
 
 print(idl_data)                         #See what is in this sav file
 
-maps = idl_data.smaparr                 #Take the maps from the sav file
-#Note, 'smaparr' is just the name of the IDL variable I saved in my sav
-#file. It's an array of submaps! But this will be whatever you decide
-#to call your variable in IDL.
+maps = idl_data.maps                    #Take the maps from the sav file
+#Note: this will depend on what you decide to call your variable in IDL.
 #e.g.:
-#   IDL > save, smaparr, '20120614_1030_1316_smaparr_0hmi.sav'
+#   IDL > save, filename='aia_193_maps.sav', maps, /compress
 
 print(len(maps))                        #This sav file contains 2 maps
 
@@ -34,10 +29,12 @@ data = maps[0]['data']                  #Take data of the 1st (0th) map
 
 #---- Plotting ---------------------------------------------------------#
 
+cmap = plt.get_cmap('sdoaia193')        #Choose AIA 193 colormap
+
 fig = plt.figure()                      #Set up a blank Figure
 ax = fig.add_subplot(111)               #Set up a blank axis in the Figure
 ax.imshow(data, origin='lower',         #Plot data with origin in lower left...
-          cmap='Greys_r')               #...and black-grey-white colourmap
+          cmap=cmap, vmin=0, vmax=3000) #...with our chosen colormap
 plt.savefig('map_from_sav.png')         #Save the Figure
 plt.show()                              #Show the Figure
 
@@ -60,9 +57,10 @@ right = xc + ((xpix*0.5)*dx)            #X-coordinate of right edge in arcsec
 bottom = yc - ((ypix*0.5)*dy)           #Y-coordinate of bottom edge in arcsec
 top = yc + ((ypix*0.5)*dy)              #Y-coordinate of top edge in arcsec
 
-plt.imshow(data, origin='lower', cmap='Greys_r',    #Plot image...
-           extent=[left,right,bottom,top])          #...with given coordinates
+plt.imshow(data, origin='lower', cmap=cmap,     #Plot image...
+           vmin=0, vmax=3000,                   #...with saturation limits...
+           extent=[left,right,bottom,top])      #...with specified coordinates
 plt.xlabel(xunits)                      #Label X-axis with units
 plt.ylabel(yunits)                      #Label Y-axis with units
-plt.savefig('map_from_sav_arcsec.png')  #Save the Figure
+plt.savefig('map_from_sav2.png')        #Save the Figure
 plt.show()                              #Show the Figure

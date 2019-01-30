@@ -2,10 +2,11 @@
 
 #---- Imports ----------------------------------------------------------#
 
-from os import listdir                      #For finding FITS files
-from os.path import isfile, join            #For finding FITS files
-import sunpy.map                            #For making maps
-import matplotlib.pyplot as plt             #For plotting
+from os import listdir                  #For finding FITS files
+from os.path import isfile, join        #For finding FITS files
+import sunpy.map                        #For making maps
+import matplotlib.pyplot as plt         #For plotting
+import sunpy.cm                         #For solar colourmaps
 
 #---- Inputs -----------------------------------------------------------#
 
@@ -28,13 +29,6 @@ data = smap.data                        #Get data from map
 
 fig = plt.figure()                      #Set up a blank Figure
 ax = fig.add_subplot(111)               #Set up a blank axis in the Figure
-ax.imshow(data, origin='lower',         #Plot data with origin in lower left...
-          cmap='Greys_r')               #...in black-grey-white colourmap
-plt.savefig('map_from_fits.png')        #Save the Figure
+smap.plot()                             #Plot the Map
+plt.savefig('map_from_fits.png')       #Save the Figure
 plt.show()                              #Show the Figure
-
-#---- Plotting Alternative ---------------------------------------------#
-
-smap.plot()                             #Automatic SunPy Plotting!
-plt.savefig('map_from_fits_v2.png')     #Save the Figure
-plt.show                                #Try me!
