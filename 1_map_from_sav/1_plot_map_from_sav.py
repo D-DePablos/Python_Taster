@@ -39,7 +39,7 @@ fig = plt.figure()                      #Set up a blank Figure
 ax = fig.add_subplot(111)               #Set up a blank axis in the Figure
 ax.imshow(data, origin='lower',         #Plot data with origin in lower left...
           cmap=cmap, vmin=0, vmax=3000) #...with our chosen colormap
-plt.savefig(cwd+'map_from_sav.png')         #Save the Figure
+plt.savefig(cwd+'map_from_sav.png', dpi=200) #Save the Figure
 plt.show()                              #Show the Figure
 
 #---- Advanced: Labelling the Axes -------------------------------------------#
@@ -62,5 +62,5 @@ top = yc + ((ypix*0.5)*dy)              #Y-coordinate of top edge in arcsec
 plt.imshow(data, origin='lower', cmap=cmap,     #Plot image...
            vmin=0, vmax=3000,                   #...with saturation limits...
            extent=[left,right,bottom,top])      #...with specified coordinates
-plt.savefig(cwd+'map_from_sav2.png')        #Save the Figure
+plt.savefig(cwd+'map_from_sav2.png', dpi=200)   #Save the Figure
 plt.show()                              #Show the Figure
