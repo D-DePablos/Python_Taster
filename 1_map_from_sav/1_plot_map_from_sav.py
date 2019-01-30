@@ -55,6 +55,8 @@ right = xc + ((xpix*0.5)*dx)            #X-coordinate of right edge in arcsec
 bottom = yc - ((ypix*0.5)*dy)           #Y-coordinate of bottom edge in arcsec
 top = yc + ((ypix*0.5)*dy)              #Y-coordinate of top edge in arcsec
 
+print('ayo')
+
 plt.imshow(data, origin='lower', cmap=cmap,     #Plot image...
            vmin=0, vmax=3000,                   #...with saturation limits...
            extent=[left,right,bottom,top])      #...with specified coordinates
