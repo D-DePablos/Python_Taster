@@ -49,8 +49,6 @@ dx = mymap['dx']                        #Width of pixels
 dy = mymap['dy']                        #Height of pixels
 xpix = len(data[0])                     #Number of pixels in X-direction
 ypix = len(data)                        #Number of pixels in Y-direction
-xunits = mymap['xunits']                #Unit of coordinates (arcsecs)
-yunits = mymap['yunits']                #Unit of coordinates (arcsecs)
 
 left = xc - ((xpix*0.5)*dx)             #X-coordinate of left edge in arcsec
 right = xc + ((xpix*0.5)*dx)            #X-coordinate of right edge in arcsec
@@ -60,7 +58,5 @@ top = yc + ((ypix*0.5)*dy)              #Y-coordinate of top edge in arcsec
 plt.imshow(data, origin='lower', cmap=cmap,     #Plot image...
            vmin=0, vmax=3000,                   #...with saturation limits...
            extent=[left,right,bottom,top])      #...with specified coordinates
-plt.xlabel(xunits)                      #Label X-axis with units
-plt.ylabel(yunits)                      #Label Y-axis with units
 plt.savefig('map_from_sav2.png')        #Save the Figure
 plt.show()                              #Show the Figure
