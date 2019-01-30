@@ -1,20 +1,24 @@
+#-----------------------------------------------------------------------------#
+#--------------------- How to Plot an IDL Map in Python ----------------------#
+#------------------------------ Alexander James ------------------------------#
+#-----------------------------------------------------------------------------#
 
+#---- Imports ----------------------------------------------------------------#
 
-#---- Imports ----------------------------------------------------------#
-
+import os                               #For getting working directory
 from scipy.io.idl import readsav        #For reading IDL data
 import matplotlib.pyplot as plt         #For plotting
 import sunpy.cm                         #For solar colourmaps
 
-#---- Inputs -----------------------------------------------------------#
+#---- Inputs -----------------------------------------------------------------#
 
-data_path = ('/Users/alexanderjames/Documents/PhD/Python_Code'
-             '/Python_Taster/1_map_from_sav/')
-sav_file = 'aia_193_maps.sav'
+cwd = os.getcwd()                       #Get current working directory
+cwd = cwd + '/1_map_from_sav/'          #Specify current working directory
+sav_file = 'aia_193_maps.sav'           #Name of input '.sav' file
 
-#---- Read Data --------------------------------------------------------#
+#---- Read Data --------------------------------------------------------------#
 
-idl_data = readsav(data_path+sav_file)  #Read the sav file
+idl_data = readsav(cwd+sav_file)  #Read the sav file
 
 print(idl_data)                         #See what is in this sav file
 
@@ -27,7 +31,7 @@ print(len(maps))                        #This sav file contains 2 maps
 
 data = maps[0]['data']                  #Take data of the 1st (0th) map
 
-#---- Plotting ---------------------------------------------------------#
+#---- Plotting ---------------------------------------------------------------#
 
 cmap = plt.get_cmap('sdoaia193')        #Choose AIA 193 colormap
 
@@ -35,10 +39,10 @@ fig = plt.figure()                      #Set up a blank Figure
 ax = fig.add_subplot(111)               #Set up a blank axis in the Figure
 ax.imshow(data, origin='lower',         #Plot data with origin in lower left...
           cmap=cmap, vmin=0, vmax=3000) #...with our chosen colormap
-plt.savefig('map_from_sav.png')         #Save the Figure
+plt.savefig(cwd+'map_from_sav.png')         #Save the Figure
 plt.show()                              #Show the Figure
 
-#---- Advanced: Labelling the Axes -------------------------------------#
+#---- Advanced: Labelling the Axes -------------------------------------------#
 
 mymap = maps[0]                         #Take first (0th) map
 data = mymap['data']                    #Take data from map
@@ -58,5 +62,5 @@ top = yc + ((ypix*0.5)*dy)              #Y-coordinate of top edge in arcsec
 plt.imshow(data, origin='lower', cmap=cmap,     #Plot image...
            vmin=0, vmax=3000,                   #...with saturation limits...
            extent=[left,right,bottom,top])      #...with specified coordinates
-plt.savefig('map_from_sav2.png')        #Save the Figure
+plt.savefig(cwd+'map_from_sav2.png')        #Save the Figure
 plt.show()                              #Show the Figure
