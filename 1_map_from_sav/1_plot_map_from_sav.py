@@ -16,8 +16,6 @@ sav_file = 'aia_193_maps.sav'
 
 idl_data = readsav(data_path+sav_file)  #Read the sav file
 
-#test
-
 print(idl_data)                         #See what is in this sav file
 
 maps = idl_data.maps                    #Take the maps from the sav file
