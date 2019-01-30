@@ -19,8 +19,7 @@ cwd = cwd + '/3_fun_with_plotting/'         #Specify current working directory
 #---- Read Data --------------------------------------------------------------#
 
 #Find all FITS files in the data_path
-files = [cwd+f for f in listdir(cwd) if isfile(join(cwd, f))
-         and '.fits' in f]
+files = [cwd+f for f in listdir(cwd) if isfile(join(cwd, f)) and '.fits' in f]
 files = sorted(files)                       #sort to get them in date-order
 
 smap1 = sunpy.map.Map(files[0])             #Make first map

@@ -26,8 +26,6 @@ print(files)                            #See a list of the files it found
 
 smap = sunpy.map.Map(files[0])          #Make a map from the file
 
-data = smap.data                        #Get data from map
-
 #---- Plotting ---------------------------------------------------------------#
 
 fig = plt.figure()                      #Set up a blank Figure
