@@ -16,6 +16,8 @@ sav_file = 'aia_193_maps.sav'
 
 idl_data = readsav(data_path+sav_file)  #Read the sav file
 
+#test
+
 print(idl_data)                         #See what is in this sav file
 
 maps = idl_data.maps                    #Take the maps from the sav file
@@ -54,8 +56,6 @@ left = xc - ((xpix*0.5)*dx)             #X-coordinate of left edge in arcsec
 right = xc + ((xpix*0.5)*dx)            #X-coordinate of right edge in arcsec
 bottom = yc - ((ypix*0.5)*dy)           #Y-coordinate of bottom edge in arcsec
 top = yc + ((ypix*0.5)*dy)              #Y-coordinate of top edge in arcsec
-
-print('ayo')
 
 plt.imshow(data, origin='lower', cmap=cmap,     #Plot image...
            vmin=0, vmax=3000,                   #...with saturation limits...
