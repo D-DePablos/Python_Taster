@@ -6,11 +6,11 @@
 #---- Imports ----------------------------------------------------------------#
 
 import os                               #For getting working directory
+import matplotlib.pyplot as plt         #For plotting
+
 from os import listdir                  #For finding FITS files
 from os.path import isfile, join        #For finding FITS files
 import sunpy.map                        #For making maps
-import matplotlib.pyplot as plt         #For plotting
-import sunpy.cm                         #For solar colourmaps
 
 #---- Inputs -----------------------------------------------------------------#
 

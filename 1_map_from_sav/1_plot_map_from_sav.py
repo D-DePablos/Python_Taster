@@ -7,13 +7,14 @@
 
 import os                               #For getting working directory
 from scipy.io.idl import readsav        #For reading IDL data
-import matplotlib.pyplot as plt         #For plotting
 import sunpy.cm                         #For solar colourmaps
+import matplotlib.pyplot as plt         #For plotting
 
 #---- Inputs -----------------------------------------------------------------#
 
 cwd = os.getcwd()                       #Get current working directory
 cwd = cwd + '/1_map_from_sav/'          #Specify current working directory
+
 sav_file = 'aia_193_maps.sav'           #Name of input '.sav' file
 
 #---- Read Data --------------------------------------------------------------#

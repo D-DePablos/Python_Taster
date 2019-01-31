@@ -20,7 +20,7 @@ cwd = cwd + '/3_fun_with_plotting/'         #Specify current working directory
 
 #Find all FITS files in the data_path
 files = [cwd+f for f in listdir(cwd) if isfile(join(cwd, f)) and '.fits' in f]
-files = sorted(files)                       #sort to get them in date-order
+files = sorted(files)                       #Sort to get them in date-order
 
 smap1 = sunpy.map.Map(files[0])             #Make first map
 
@@ -38,5 +38,5 @@ ax2 = fig.add_subplot(1,2,2, projection=smap2)  #1 row, 2 columns, 2nd axis
 smap2.plot()                                    #Plot the second Map on axis 2
 ax2.grid(False)                                 #Turn off coordinate grid
 
-plt.savefig(cwd+'subplots.png')                     #Save the Figure
+plt.savefig(cwd+'subplots.png')                 #Save the Figure
 plt.show()                                      #Show the Figure

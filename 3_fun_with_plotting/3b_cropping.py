@@ -5,15 +5,15 @@
 
 #---- Imports ----------------------------------------------------------------#
 
-import os                                   #for getting working directory
-from os import listdir                      #for finding FITS files
-from os.path import isfile, join            #for finding FITS files
-import sunpy.map                            #for making maps
-import matplotlib.pyplot as plt             #for plotting
+import os                                   #For getting working directory
+from os import listdir                      #For finding FITS files
+from os.path import isfile, join            #For finding FITS files
+import sunpy.map                            #For making maps
+import matplotlib.pyplot as plt             #For plotting
 
-import astropy.units as u                   #for giving arcseconds
-from astropy.coordinates import SkyCoord    #for coordinates
-from matplotlib import patches              #for drawing boxes
+import astropy.units as u                   #For giving arcseconds
+from astropy.coordinates import SkyCoord    #For coordinates
+from matplotlib import patches              #For drawing boxes
 
 #---- Inputs -----------------------------------------------------------------#
 
@@ -30,9 +30,9 @@ height = 250 * u.arcsec                     #Height of box
 
 #Find all FITS files in the data_path
 files = [cwd+f for f in listdir(cwd) if isfile(join(cwd, f)) and '.fits' in f]
-files = sorted(files) #sort alphabetically to get them in date-order
+files = sorted(files)                       #Sort to get them in date-order
 
-smap1 = sunpy.map.Map(files[0]) #Make first map
+smap1 = sunpy.map.Map(files[0])             #Make first map
 
 #---- Cropping ---------------------------------------------------------------#
 
@@ -57,5 +57,5 @@ ax2 = fig.add_subplot(1,2,2, projection=smap2)  #1 row, 2 columns, 2nd axis
 smap2.plot()                                    #Plot the second Map on axis 2
 ax2.grid(False)                                 #Turn off coordinate grid
 
-plt.savefig(cwd+'cropping.png')                     #Save the Figure
+plt.savefig(cwd+'cropping.png')                 #Save the Figure
 plt.show()                                      #Show the Figure
