@@ -4,17 +4,14 @@
 #-----------------------------------------------------------------------------#
 
 #---- Imports ----------------------------------------------------------------#
-
-import os                               #For getting working directory
 import matplotlib.pyplot as plt         #For plotting
-
-from os import listdir                  #For finding FITS files
+from os import listdir, getcwd          #For finding FITS files
 from os.path import isfile, join        #For finding FITS files
 import sunpy.map                        #For making maps
 
 #---- Inputs -----------------------------------------------------------------#
 
-cwd = os.getcwd()                       #Get current working directory
+cwd = getcwd()                          #Get current working directory
 cwd = cwd + '/2_map_from_fits/'         #Specify current working directory
 
 #---- Read Data --------------------------------------------------------------#
