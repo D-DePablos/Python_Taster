@@ -4,6 +4,7 @@
 #-----------------------------------------------------------------------------#
 
 #---- Imports ----------------------------------------------------------------#
+
 import matplotlib.pyplot as plt         #For plotting
 from os import listdir, getcwd          #For finding FITS files
 from os.path import isfile, join        #For finding FITS files

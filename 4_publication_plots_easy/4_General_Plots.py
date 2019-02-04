@@ -4,15 +4,17 @@
 #-----------------------------------------------------------------------------#
 
 #---- Imports ----------------------------------------------------------------#
+
 import matplotlib.pyplot as plt
 import numpy as np
+
 #------------------------Inputs ----------------------------------------------#
 
 # We first create a pair of values to plot:
 # - Linear space of 2Pi Radians, taking 200 steps
 x = np.linspace(0,2*np.pi,200)
 y = np.sin(x)
-z = np.cosh(x) 
+z = np.cosh(x)
 
 #---------------------First Example Plot -------------------------------------#
 
