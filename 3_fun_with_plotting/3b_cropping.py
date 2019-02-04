@@ -17,8 +17,7 @@ from matplotlib import patches              #For drawing boxes
 
 #---- Inputs -----------------------------------------------------------------#
 
-cwd = os.getcwd()                           #Get current working directory
-cwd = cwd + '/3_fun_with_plotting/'         #Specify current working directory
+cwd = os.getcwd() + '/'                     #Get current working directory
 
 # Define a region of interest
 x0 = -300 * u.arcsec                        #Centre x-coordinate

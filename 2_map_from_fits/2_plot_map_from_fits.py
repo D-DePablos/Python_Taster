@@ -12,8 +12,7 @@ import sunpy.map                        #For making maps
 
 #---- Inputs -----------------------------------------------------------------#
 
-cwd = getcwd()                          #Get current working directory
-cwd = cwd + '/2_map_from_fits/'         #Specify current working directory
+cwd = getcwd() + '/'                    #Get current working directory
 
 #---- Read Data --------------------------------------------------------------#
 

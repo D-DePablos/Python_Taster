@@ -12,8 +12,7 @@ import matplotlib.pyplot as plt         #For plotting
 
 #---- Inputs -----------------------------------------------------------------#
 
-cwd = os.getcwd()                       #Get current working directory
-cwd = cwd + '/1_map_from_sav/'          #Specify current working directory
+cwd = os.getcwd() + '/'                 #Get current working directory
 
 sav_file = 'aia_193_maps.sav'           #Name of input '.sav' file
 

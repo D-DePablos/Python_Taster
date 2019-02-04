@@ -13,8 +13,7 @@ import matplotlib.pyplot as plt             #For plotting
 
 #---- Inputs -----------------------------------------------------------------#
 
-cwd = os.getcwd()                           #Get current working directory
-cwd = cwd + '/3_fun_with_plotting/'         #Specify current working directory
+cwd = os.getcwd() +'/'                      #Get current working directory
 
 #---- Read Data --------------------------------------------------------------#
 

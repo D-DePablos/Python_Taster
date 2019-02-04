@@ -12,7 +12,7 @@ import matplotlib.pyplot as plt             #For plotting
 
 #---- Inputs -----------------------------------------------------------------#
 
-work_dir = Path.cwd() /'2_map_from_fits'    #Formatting Paths is easy
+work_dir = Path.cwd()    #Formatting Paths is easy
 
 #---- Read Data --------------------------------------------------------------#
 
