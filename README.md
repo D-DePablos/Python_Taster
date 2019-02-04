@@ -1,43 +1,61 @@
 # Python_Taster
 Python Taster MSSL Session 2019
 
+Total Time of Installation: ~ 5 minutes
 
-Instructions Based on https://openastronomy.org/rcsc18/setup-instructions/ -- Refer here if there are any issues
+Instructions Based on https://openastronomy.org/rcsc18/setup-instructions/
+Refer there if any issues arise.
+
+We will allow some minutes at the start of the workshop to get everything ready.
 
 How-to get ready:
 
 1 - Miniconda version of Python 3: https://conda.io/en/latest/miniconda.html
 
-        Download the version corresponding to your system. Run the installer with the
-        default values or select a different installation directory if preferred
+        Download the Python 3.7 version corresponding to your system.
 
-        If on Linux (no explicit installer), run the .sh script via opening a console,
-        changing into the directory of the downloaded file and run "bash "filename".sh",
+        We encourage the use of the .pkg file if on macOS, or the .exe on Windows.
+
+        Run the installer with the default values or select a different
+        installation directory if preferred
+
+        If on Linux (no explicit installer), or wanting to use the .sh file,
+        run the .sh script via opening a console, changing into the directory
+        of the downloaded file and run "bash "filename".sh",
         it will then prompt you to accept terms and conditions,
         and allow you to type a location for the installation (choose wisely!)
 
 
-        Open a new terminal, now running "conda list" should return a few packages
-        that come with Miniconda, including Python.
 
 
-2 - Getting Python Packages:
+        Once Installed, open a new terminal, now running:
+
+                conda list
+
+        should return a few packages that come with Miniconda, including Python.
+
+
+2 - Getting Python Package Sources:
 
         Getting packages that are stored in either the Anaconda or Python library is easy,
         we just need to do the following on a Terminal:
 
             i/ Add the repository where the packages are contained:
 
-                - conda config --append channels conda-forge
+                 conda config --append channels conda-forge
 
-            ii/ Now we can install the packages which are required using the expression:
+            ii/ Now we can install any packages we require by using the expression:
 
-                - conda install package1 package2 package3 package...
+                 conda install package1 package2 package3 package...
+
 
             Note: It is more efficient to install multiple packages at once!
 
 
-3- The packages which we need for the tutorial are the following:
+3- Installing the Packages:
+
+
+    The packages which we need for the tutorial are the following:
 
     - scipy
     - numpy
@@ -48,7 +66,7 @@ How-to get ready:
 
         So we may run the following command:
 
-            - conda install scipy numpy matplotlib sunpy astropy
+             conda install scipy numpy matplotlib sunpy astropy
 
         And be ready for the tutorial!
 
@@ -58,9 +76,10 @@ How-to get ready:
         The last thing to get ready is to run "idle3" in our console, and write
         in the following commands:
 
-             import sunpy
+             import sunpy.map
              help(sunpy.map)
 
+        And it should come up with some information about the package contents
 
 
         If any issues arise, check that you have installed the proper packages
