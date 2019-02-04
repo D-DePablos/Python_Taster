@@ -24,13 +24,13 @@ How-to get ready:
 2 - Getting Python Packages:
 
         Getting packages that are stored in either the Anaconda or Python library is easy,
-        we just need to do the following:
+        we just need to do the following on a Terminal:
 
-            i/ Add the repository where the packages are contained, in this case by running:
+            i/ Add the repository where the packages are contained:
 
                 - conda config --append channels conda-forge
 
-            ii/ Now we can install the packages which are required through:
+            ii/ Now we can install the packages which are required using the expression:
 
                 - conda install package1 package2 package3 package...
 
@@ -55,21 +55,27 @@ How-to get ready:
 
 4 - Checking our setup:
 
-        The last thing to get ready is to run "python" in our console, and once inside the Python console,
-        checking that the following commands work:
+        The last thing to get ready is to run "idle3" in our console, and write
+        in the following commands:
 
-             import sunpy.cm
-             import matplotlib.pyplot as plt
-             import astropy.units as u
-
-
-        If any issues at all rise up, check the error message, install the package if necessary,
-        or get in contact with either of us. We will, however have a frame to troubleshoot any further issues.
+             import sunpy
+             help(sunpy.map)
 
 
-5 - Getting started Early:
 
-        If you do have some time prior to the session, the tutorial made by the guys from openastronomy is pretty good,
-        do remember to use the instructor version, however!
+        If any issues arise, check that you have installed the proper packages
+        if it still does not work, contact either of us.
+
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+
+ 5 - Getting started Early:
+
+        If you do have some time prior to the session, the tutorial made by
+        the guys from openastronomy is pretty good,
+        do remember to use the instructor version, as it contains all the info!
 
             - https://github.com/OpenAstronomy/rcsc18_lessons
