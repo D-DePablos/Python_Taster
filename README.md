@@ -98,3 +98,11 @@ How-to get ready:
         do remember to use the instructor version, as it contains all the info!
 
             - https://github.com/OpenAstronomy/rcsc18_lessons
+
+
+6 - Getting Help:
+
+        Generally, the best approach to a high-level issue with Python or any of
+        its packages is to search for our specific issue: Many packages have
+        error messages that will hopefully help when figuring out what to do to
+        fix the current issue!

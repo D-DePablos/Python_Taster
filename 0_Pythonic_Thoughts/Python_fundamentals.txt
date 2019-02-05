@@ -1,0 +1,188 @@
+Python is a programming language based on open-source development, community-led
+approaches, and very beginner-friendly!
+
+
+Proof of simplicity:
+
+Once we are on a Python console (running python3 on our terminal):
+
+We can create a list full of items like so:
+
+item_list = ['a', 'b', 'c']
+
+And loop through all of them in a straight-forward manner:
+
+for item in item_list:
+    print(item)
+
+In Python, loops and other functions do not have an endfor, endif statement.
+We use tabulation to create the hierarchy!
+
+This simple fact means that our code is straight forward and readable by anyone.
+(Take that, IDL)
+
+
+So we could try to fetch for a specific item from our list:
+
+raffle = ['money', 'happiness', 'love']
+
+for ticket in raffle:
+
+    if ticket == 'money':
+
+        print('You now have ' + ticket)  - IDL Formatting
+
+        print('You now have {}'.format(ticket)) - Old Python formatting
+
+        print(f'You now have {ticket}')  - Python 3 Formatting (Better!)
+
+
+            Here we have also introduced two forms of string formatting in
+            Python 3!
+
+            There are other ways to format strings, but it is better to use
+            the f'STRING{variable}' form, as it allows for dynamic numbering
+            and is the current go-to of most developers.
+
+
+###############################################################################
+###############################################################################
+
+
+Geting HELP!:
+
+    Python, as many other languages, allows collaborators to create notes within
+    their functions, creating an offline documentation source. How great is that!
+
+    In order to access these comments, we just need to type:
+
+
+        help(x) # Where x is the thing we need help with.
+
+
+    We can get help on functions, parameters, data structures, ...
+
+    (Close the docs in the console with Q, generally)
+
+###############################################################################
+###############################################################################
+
+SOME DATA STRUCTURES IN PYTHON:
+
+Now, lists are not the only useful structure in Python. We can use other very
+powerful structures, usually by importing the respective packages:
+
+- Numpy arrays:
+
+    numpy is one of the most powerful tools for data handling in Python.
+    It allows us to create arrays with multiple dimensions, and make matrix-style
+    calculations.
+
+    We need to import numpy first:
+
+        import numpy as np
+
+    Once we have it ready, it is trivial to create an array.
+
+
+        matrix = np.array([[1,2,1],[3,5,6],[8,4,1]])
+
+        print(matrix)
+
+            Note the brackets we use:
+
+                () - np.array is a function, it takes inputs inside the()
+
+                [  ] - The first Square brackets contains all rows,
+                       separating each of the columns with a ","
+
+                [][][] - Each of the Square brackets represents a row
+
+
+    And see its data:
+
+        print(matrix)
+
+    And as an array, it is possible to use many subfunctions that open up
+    many possibilities:
+
+        matrix.shape  # A parameter, does not take () brackets
+        matrix.__contains__(5)  # A function of the Array object, requires ()
+
+
+    All of which we can get with help(a)!
+
+
+
+
+###############################################################################
+
+
+- Pandas Dataframes:
+
+    Once we have created numpy arrays, it is straightforward to turn them
+    into their own table objects: Pandas DataFrames. These are easier to
+    visualize generally, and have many different quirks that allows for
+    faster processing of multiple arrays.
+
+
+    We start with the imports:
+
+
+        import numpy as np
+        import pandas as pd
+
+
+        Time = np.linrange(0,100,1)         # Range from 0 to 99 on steps of 1
+        Amount = np.random.random(100)      # 100 random numbers from 0 to 1
+
+
+    Now we may create our DataFrame:
+
+
+        df = pd.DataFrame({'Time': Time,
+                           'Amount': Amount})
+
+
+    Which we may now use more efficiently, as the columns are named:
+
+        df.Time
+        df.Amount
+
+        df.header()
+
+
+    Dataframes are a very powerful data visualization structure, and allow
+    the user to intuitively look at tabled data.
+
+        df.to_csv(f'{Path}'/file.csv)  # To save some data
+
+
+
+###############################################################################
+###############################################################################
+###############################################################################
+###############################################################################
+###############################################################################
+###############################################################################
+
+
+Creating Functions in Python.
+
+
+Just like programs on IDL, it is possible to create functions in Python:
+
+
+Try to import the raffle we have on the other folder. You should be able to if
+you have opened Python from this directory.
+
+
+
+        from import_me import luckylotto
+
+        luckylotto(raffle)
+
+###############################################################################
+###############################################################################
+###############################################################################
+###############################################################################
