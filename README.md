@@ -6,7 +6,7 @@ Total Time of Installation: ~ 5 minutes
 Instructions Based on https://openastronomy.org/rcsc18/setup-instructions/
 Refer there if any issues arise.
 
-We will allow some minutes at the start of the workshop to get everything ready.
+We will allow some minutes at the start of the workshop to fix any issues, too.
 
 How-to get ready:
 
@@ -106,3 +106,8 @@ How-to get ready:
         its packages is to search for our specific issue: Many packages have
         error messages that will hopefully help when figuring out what to do to
         fix the current issue!
+        
+        
+7 - Translation:  Guide on how to translate IDL conditionals to Python:
+
+        https://docs.sunpy.org/en/stable/guide/ssw.html
