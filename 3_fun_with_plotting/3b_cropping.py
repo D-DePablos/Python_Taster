@@ -36,8 +36,8 @@ smap1 = sunpy.map.Map(files[0])             #Make first map
 #---- Cropping ---------------------------------------------------------------#
 
 #Create coordinates of submap corners
-bottom_left = SkyCoord(x0 - length, y0 - length, frame=smap1.coordinate_frame)
-top_right = SkyCoord(x0 + length, y0 + length, frame=smap1.coordinate_frame)
+bottom_left = SkyCoord(x0 - length, y0 - height, frame=smap1.coordinate_frame)
+top_right = SkyCoord(x0 + length, y0 + height, frame=smap1.coordinate_frame)
 
 #Create submap
 smap2 = smap1.submap(bottom_left, top_right)
