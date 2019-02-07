@@ -18,7 +18,7 @@ sav_file = 'aia_193_maps.sav'           #Name of input '.sav' file
 
 #---- Read Data --------------------------------------------------------------#
 
-idl_data = readsav(cwd+sav_file)  #Read the sav file
+idl_data = readsav(cwd+sav_file)        #Read the sav file
 
 print(idl_data)                         #See what is in this sav file
 
