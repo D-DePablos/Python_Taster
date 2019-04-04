@@ -10,7 +10,15 @@ We will allow some minutes at the start of the workshop to fix any issues, too.
 
 How-to get ready:
 
-1 - Miniconda version of Python 3: https://conda.io/en/latest/miniconda.html
+0 - If you have Miniconda installed on your system, run:
+
+        conda install anaconda
+        
+    This should fix all compatibility issues
+    
+    
+
+1 - Anaconda version of Python 3: https://conda.io/projects/conda/en/latest/user-guide/install/index.html
 
         Download the Python 3.7 version corresponding to your system.
 
