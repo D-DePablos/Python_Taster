@@ -116,6 +116,9 @@ How-to get ready:
         fix the current issue!
         
         
-7 - Translation:  Guide on how to translate IDL conditionals to Python:
+7 - Some of the exercises have two variants to get the user accustomed to different syntax in Python and learn about other packages which may come in handy.
+
+
+8 - Conversion:  Guide on how to translate IDL conditionals to Python:
 
         https://docs.sunpy.org/en/stable/guide/ssw.html
