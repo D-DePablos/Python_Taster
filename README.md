@@ -18,7 +18,7 @@ How-to get ready:
     
     
 
-1 - Anaconda version of Python 3: https://conda.io/projects/conda/en/latest/user-guide/install/index.html
+1 - Anaconda version of Python 3: https://www.anaconda.com/distribution/
 
         Download the Python 3.7 version corresponding to your system.
 
@@ -40,7 +40,7 @@ How-to get ready:
 
                 conda list
 
-        should return a few packages that come with Miniconda, including Python.
+        should return a list of packages that come with Anaconda, including Python.
 
 
 2 - Getting Python Package Sources:
@@ -52,9 +52,9 @@ How-to get ready:
 
                  conda config --append channels conda-forge
 
-            ii/ Now we can install any packages we require by using the expression:
+            ii/ Now we can install any packages we require by using this type of expression:
 
-                 conda install package1 package2 package3 package...
+                 conda install NAME__OF_PACKAGE1 NAME_OF_PACKAGE2
 
 
             Note: It is more efficient to install multiple packages at once!
